@@ -19,9 +19,8 @@ post_header={
     PHPSESSID=hb0o9bkct2f6ge164oj3vj0me5;think_language=zh-CN',
     'Connection':'keep-alive',
 }
-
-post_data={'domain':'NUIST',
+post_data={'domain':DOMAIN_SELECTION,
            'enablemacauth':'0',
-           'password':'475869',
-           'username':'15261806816'
-          }   
+           'password':base64.b64encode(USER_PASSWATD.encode()),
+           'username':USER_ACCOUNT
+          }
