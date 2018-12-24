@@ -33,3 +33,4 @@ post_data={'domain':DOMAIN_SELECTION,
            'password':base64.b64encode(USER_PASSWATD.encode()),
            'username':USER_ACCOUNT
           }
+z=requests.post(post_addr,data=post_data,headers=post_header)
