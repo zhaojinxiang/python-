@@ -1,4 +1,9 @@
 import requests
+import base64
+
+USER_ACCOUNT='15261806816'
+DOMAIN_SELECTION='CMCC'
+USER_PASSWATD='475869'
 
 post_addr="http://a.nuist.edu.cn/index.php/index/login"
 
