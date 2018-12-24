@@ -1,13 +1,3 @@
-import base64
-import requests
-
-
-USER_ACCOUNT='15261806816'
-DOMAIN_SELECTION='CMCC'
-USER_PASSWATD='475869'
-
-#登录地址
-post_addr="http://a.nuist.edu.cn/index.php/index/login"
 
 #构造头部信息
 post_header={
@@ -27,14 +17,3 @@ post_header={
     'Connection':'keep-alive',
 }
 
-
-post_data={'domain':DOMAIN_SELECTION,
-           'enablemacauth':'0',
-           'password':base64.b64encode(USER_PASSWATD.encode()),
-           'username':USER_ACCOUNT
-          }
-#发送post请求登录网页
-z=requests.post(post_addr,data=post_data,headers=post_header)
-#z.text为str类型的json数据因此先编码成byte类型在解码成unicode型这样就可以正常输出中文
-s=z.text.encode('utf-8').decode('unicode-escape')
-print(s)
