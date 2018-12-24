@@ -2,6 +2,7 @@ import requests
 
 post_addr="http://a.nuist.edu.cn/index.php/index/login"
 
+#构造头部信息
 post_header={
     'Host': 'a.nuist.edu.cn',
     'User-Agent':'Mozilla/5.0 (X11; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0',
@@ -10,11 +11,11 @@ post_header={
     'Accept-Encoding': 'gzip, deflate',
     'Content-Type': 'application/x-www-form-urlencoded',
     'X-Requested-With':'XMLHttpRequest',
-    'Referer':'http://a.nuist.edu.cn/index',
-    'Content-Length': '66',
+    'Referer':'http://a.nuist.edu.cn/index.php?url=aHR0cDovL2RldGVjdHBvcnRhbC5maXJlZm94LmNvbS9zdWNjZXNzLnR4dA==',
+    'Content-Length': '67',
 
-    'Cookie':'_gscu_1147341576=059821653286gq10; sunriseUsername=123441534;\
-    sunriseDomain=NUIST;sunriseRememberPassword=true; sunrisePassword=123456;\
+    'Cookie':'_gscu_1147341576=059821653286gq10; sunriseUsername='+USER_ACCOUNT+';\
+    sunriseDomain='+DOMAIN_SELECTION+';sunriseRememberPassword=true; sunrisePassword='+USER_PASSWATD+';\
     PHPSESSID=hb0o9bkct2f6ge164oj3vj0me5;think_language=zh-CN',
     'Connection':'keep-alive',
 }
