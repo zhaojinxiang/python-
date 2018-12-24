@@ -1,5 +1,7 @@
 import requests
+import base64
 
+#登录地址
 post_addr="http://a.nuist.edu.cn/index.php/index/login"
 
 #构造头部信息
